@@ -1,0 +1,161 @@
+.container
+    overflow: hidden
+
+.machine
+    display: flex
+    //align-items: center
+
+.slots
+    display: flex
+    flex-wrap: wrap
+    width: 60rem
+
+.slot
+    width: 20rem
+    height: 20rem
+    display: flex
+    flex-direction: column
+    border-bottom: 1px solid gray
+    border-left: 1px solid gray
+    justify-content: center
+
+    &:nth-child(-n+3)
+        border-top: 1px solid gray
+
+    &:nth-child(3n)
+        border-right: 1px solid gray
+
+    .product
+        position: absolute
+        left: 2.5rem
+        top: 1rem
+
+        .title
+            display: none
+
+        .price
+            display: none
+
+    &__number
+        text-align: center
+
+    &__title
+        text-align: center
+
+    &__price
+        text-align: center
+        font-weight: bold
+
+.products
+    position: relative
+    width: 15rem
+    height: 15rem
+
+.product
+    display: flex
+    flex-direction: column
+    width: 15rem
+    height: 15rem
+    align-items: center
+
+    IMG
+        display: block
+        object-fit: contain
+        width: 10rem
+        height: 10rem
+        //flex: auto 0 0
+
+    &:nth-child(1)
+        transform: translate(-0.1rem, -0.1rem)
+
+    &:nth-child(2)
+        transform: translate(-0.8rem, -0.8rem)
+
+    &:nth-child(3)
+        transform: translate(-0.6rem, -0.6rem)
+
+    &:nth-child(4)
+        transform: translate(-0.4rem, -0.4rem)
+
+.controls
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 4rem 0 0 2rem
+
+    .buttons
+        display: flex
+        flex-wrap: wrap
+        width: 15rem
+        justify-content: center
+
+        .button
+            width: 5rem
+            height: 5rem
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 2rem
+            border-top: 3px solid gray
+            border-right: 3px solid gray
+            border-bottom: 3px solid #ccc
+            border-left: 3px solid #ccc
+            color: black
+            text-decoration: none
+
+            &:active
+                border-top: 3px solid #ccc
+                border-right: 3px solid #ccc
+                border-bottom: 3px solid gray
+                border-left: 3px solid gray
+
+    .display
+        background: #ececec
+        border-radius: 3px
+        font: 2rem/3rem Courier
+        width: 5rem
+        text-align: center
+        margin-bottom: 2rem
+
+    .actions
+        margin-top: 2rem
+
+        .action
+            display: inline-block
+            width: 6rem
+            margin: 0 0.5rem
+            text-align: center
+            color: black
+            text-decoration: none
+            font-size: 1.5rem
+            line-height: 3rem
+            border-top: 3px solid gray
+            border-right: 3px solid gray
+            border-bottom: 3px solid #ccc
+            border-left: 3px solid #ccc
+
+            &:active
+                border-top: 3px solid #ccc
+                border-right: 3px solid #ccc
+                border-bottom: 3px solid gray
+                border-left: 3px solid gray
+
+    .error
+        margin-top: 1.5rem
+        color: red
+        font-size: 1.4rem
+
+.cart
+
+    .balance
+        padding: 2rem
+        font-size: 2rem
+
+        BUTTON
+            display: inline-block
+            margin-left: 2rem
+
+    &__list
+        display: flex
+        flex-wrap: wrap
+
